@@ -10,7 +10,7 @@ export const cardVariants = cva(
     variants: {
       variant: {
         default: "bg-indigo-500/25 dark:bg-indigo-500/25",
-        secondary: "bg-slate-900/50 dark:bg-slate-600/25",
+        secondary: "bg-cyan-900/10 dark:bg-slate-600/25",
         transparent: "bg-transparent",
         linkedin:
           "bg-[#0e76a8] dark:bg-[#49a7ff56] flex flex-col justify-center items-center",

@@ -29,7 +29,6 @@ body {
 .dpNFuT {
   background-image: repeating-linear-gradient(to bottom, transparent, transparent 99px, #686c7328 99px, #686c7328 100px),
     repeating-linear-gradient(to right, transparent, transparent 99px, #686c7328 99px, #686c7328 100px);
-
 }
 
 .dpNFuT::after {
