@@ -18,7 +18,7 @@ const MailSection: FC<MailSectionProps> = ({}) => {
         className="aspect-square flex flex-col justify-center items-center"
       >
         <Icons.NewTab />
-        Mail
+        <Icons.Mail />
       </Card>
     </Link>
   );

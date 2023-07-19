@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import NextBreadcrumbs from "@/components/Breadcrumbs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,10 +25,11 @@ export default function RootLayout({
           <main
             className={cn(
               inter.className,
-              "bg-opacity-20 min-h-screen transition-colors ease-in-out duration-5000 text-slate-950 dark:text-slate-100 bg-gradient-to-br from-slate-100 via-blue-100 to-cyan-200  dark:from-slate-950 dark:via-slate-800"
+              "bg-opacity-20 min-h-screen transition-colors ease-in-out duration-5000 text-cyan-100 dark:text-slate-100 bg-gradient-to-br from-slate-100 via-blue-300 to-teal-400  dark:from-slate-950 dark:via-slate-700 dark:to-slate-950"
             )}
           >
-            <div className="dpNFuT min-h-screen lg:px-40 p-1">{children}</div>
+            {/* dpNFuT */}
+            <div className=" min-h-screen lg:px-96 p-1">{children}</div>
           </main>
         </Providers>
       </body>

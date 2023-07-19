@@ -10,11 +10,12 @@ const CvSection: FC<CvSectionProps> = ({}) => {
     <Link href={"/cv"} rel="noopener noreferrer" target="blank">
       <Card
         hover={"scale"}
-        variant={"default"}
+        variant={"intense"}
         className="aspect-square flex flex-col justify-center items-center"
       >
         <Icons.DownLoad />
-        CV
+        <span className="text-sm md:text-sm font-bold mt-7">DOWNLOAD MY</span>
+        <span className="text-3xl md:text-6xl font-bold">CV</span>
       </Card>
     </Link>
   );

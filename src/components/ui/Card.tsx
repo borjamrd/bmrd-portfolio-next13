@@ -5,12 +5,13 @@ import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 export const cardVariants = cva(
-  "backdrop-filter backdrop-blur-sm rounded-3xl overflow-hidden",
+  "backdrop-filter backdrop-blur-sm shadow rounded-3xl overflow-hidden",
   {
     variants: {
       variant: {
-        default: "bg-indigo-500/25 dark:bg-indigo-500/25",
+        default: "bg-sky-900/50 dark:bg-slate-200/25",
         secondary: "bg-cyan-900/10 dark:bg-slate-600/25",
+        intense: "bg-green-600/50 dark:bg-green-900/25",
         transparent: "bg-transparent",
         linkedin:
           "bg-[#0e76a8] dark:bg-[#49a7ff56] flex flex-col justify-center items-center",
