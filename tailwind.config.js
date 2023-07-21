@@ -20,6 +20,8 @@ module.exports = {
         ...colors,
         'light-gold': '#f5bc51',
         'dark-gold': '#533519',
+        'discord': '#7289da',
+        'discord-dark': '#282b30'
       },
       aspectRatio: {
         '4/3': '4 / 3',

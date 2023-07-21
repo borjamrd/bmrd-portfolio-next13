@@ -29,7 +29,7 @@ export default function RootLayout({
             )}
           >
             {/* dpNFuT */}
-            <div className=" min-h-screen lg:px-96 p-1">{children}</div>
+            <div className="min-h-screen lg:px-96 p-5">{children}</div>
           </main>
         </Providers>
       </body>

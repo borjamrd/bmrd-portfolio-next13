@@ -16,10 +16,13 @@ const GithubSection: FC<GithubSectionProps> = ({}) => {
     >
       <Card
         hover={"scale"}
-        variant={"intense"}
+        variant={"secondary"}
         className="h-full w-full flex flex-col justify-center items-center"
       >
-        <div className="h-full w-full absolute">
+        <div className="h-full w-full flex justify-center items-center">
+          <Icons.Github />
+        </div>
+        {/* <div className="h-full w-full absolute">
           <Image
             src={github}
             alt="Picture of the author"
@@ -29,7 +32,7 @@ const GithubSection: FC<GithubSectionProps> = ({}) => {
             // blurDataURL="data:..."  // automatically provided
             // placeholder="blur" // Optional blur-up while loading
           />
-        </div>
+        </div> */}
         <Icons.NewTab />
       </Card>
     </Link>
