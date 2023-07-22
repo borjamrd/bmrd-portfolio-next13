@@ -11,15 +11,15 @@ const CodeSection: FC<CodeSectionProps> = ({}) => {
       href={"https://app.codesignal.com/profile/borja_m_mbj"}
       rel="noopener noreferrer"
       target="blank"
-      className="col-span-3 md:col-span-2 aspect-3/1 md:aspect-auto"
+      className="col-span-1 md:col-span-2 aspect-auto"
     >
       <Card
         hover={"scale"}
-        variant={"default"}
+        variant={"codeSignal"}
         className="h-full w-full flex flex-col justify-center items-center"
       >
         <Icons.NewTab />
-        CodeSignal
+        <p className="text-3xl font-bold">CodeSignal</p>
       </Card>
     </Link>
   );

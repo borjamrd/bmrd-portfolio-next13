@@ -16,11 +16,13 @@ const NotionSection: FC<NotionSectionProps> = ({}) => {
     >
       <Card
         hover={"scale"}
-        variant={"default"}
+        variant={"dark"}
         className="aspect-square flex flex-col justify-center items-center"
       >
         <Icons.NewTab />
-        Notion profile
+        <div className="text-4xl">
+          <Icons.AvatarNotion />
+        </div>
       </Card>
     </Link>
   );

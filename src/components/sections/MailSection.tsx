@@ -14,7 +14,7 @@ const MailSection: FC<MailSectionProps> = ({}) => {
     >
       <Card
         hover={"scale"}
-        variant={"default"}
+        variant={"violet"}
         className="aspect-square flex flex-col justify-center items-center"
       >
         <Icons.NewTab />

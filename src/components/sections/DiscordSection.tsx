@@ -21,11 +21,11 @@ const DiscordSection: FC<DiscordSectionProps> = async ({}) => {
   const detailsTitle = activity?.assets?.small_text;
   const details = activity?.details;
   return (
-    <Card className="relative aspect-square flex flex-col justify-center items-center">
+    <Card className="relative col-span-2 md:row-span-1  aspect-2/1 flex flex-col justify-center items-center">
       {activity ? (
         <>
           <div className="transition ease-in-out bg-discord duration-300 hover:opacity-0 absolute h-full w-full flex justify-center items-center">
-            <div className="flex gap-1 md:gap-2 justify-center items-center text-md md:text-xl xl:text-2xl font-bold">
+            <div className="flex gap-1 md:gap-2 justify-center items-center text-md md:text-2xl lg:text-4xl font-bold">
               <Icons.Discord />{" "}
               {textActivity ? <p>{textActivity}</p> : <p>Offline</p>}
             </div>
@@ -40,7 +40,7 @@ const DiscordSection: FC<DiscordSectionProps> = async ({}) => {
         </>
       ) : (
         <div className="transition  bg-discord duration-300 absolute h-full w-full flex justify-center items-center">
-          <p className="flex gap-1 md:gap-2 justify-center items-center text-md md:text-xl xl:text-2xl font-bold">
+          <p className="flex gap-1 md:gap-2 justify-center items-center text-md md:text-2xl lg:text-4xl font-bold">
             <Icons.Discord />
             <p>Offline</p>
           </p>

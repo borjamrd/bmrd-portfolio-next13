@@ -10,7 +10,7 @@ const CvSection: FC<CvSectionProps> = ({}) => {
     <Link href={"/cv"} rel="noopener noreferrer" target="blank">
       <Card
         hover={"scale"}
-        variant={"intense"}
+        variant={"dark"}
         className="aspect-square flex flex-col justify-center items-center"
       >
         <Icons.DownLoad />

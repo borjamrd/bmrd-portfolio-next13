@@ -32,12 +32,12 @@ export default function Home() {
           <MailSection />
           <ProjectSection />
           <TechSection />
-          <SpotifySection />
+          {/* <SpotifySection /> */}
           <DiscordSection />
           <CourseNodeSection />
           <CourseAngularSection />
-          <NotionSection />
           <CodeSection />
+          <NotionSection />
           <FormSection />
         </section>
       </div>

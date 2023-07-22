@@ -1,15 +1,21 @@
-import { FC } from "react";
+"use client";
+import { FC, useEffect, useState } from "react";
 import Card from "../ui/Card";
-import { getAccessToken } from "@/lib/spotify";
+import getNowPlayingItem from "@/pages/api/spotify";
 
 interface SpotifySectionProps {}
 
-const SpotifySection: FC<SpotifySectionProps> = async ({}) => {
-  const clientId = "4cefcd30a65e4c6a8dfaf1518ef242a0";
-  const access_token = await getAccessToken(clientId);
-  if (access_token) {
-    // await fetchProfile(accessToken);
-  }
+const SpotifySection: FC<SpotifySectionProps> = ({}) => {
+  const [loading, setLoading] = useState(true);
+  const [result, setResult] = useState({});
+
+  useEffect(() => {
+    Promise.all([getNowPlayingItem()]).then((results) => {
+      console.log(result);
+      setResult(results[0]);
+      setLoading(false);
+    });
+  });
 
   return (
     <Card className="col-span-2 md:row-span-1 aspect-auto flex flex-col justify-center items-center">

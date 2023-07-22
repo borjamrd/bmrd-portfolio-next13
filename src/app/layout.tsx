@@ -25,11 +25,11 @@ export default function RootLayout({
           <main
             className={cn(
               inter.className,
-              "bg-opacity-20 min-h-screen transition-colors ease-in-out duration-5000 text-cyan-100 dark:text-slate-100 bg-gradient-to-br from-slate-100 via-blue-300 to-teal-400  dark:from-slate-950 dark:via-slate-700 dark:to-slate-950"
+              "bg-opacity-20 min-h-screen transition-colors ease-in-out duration-5000 text-cyan-100  dark:text-slate-100 bg-gradient-to-br from-slate-100 via-blue-300 to-teal-400  dark:from-slate-950 dark:via-slate-700 dark:to-slate-950"
             )}
           >
-            {/* dpNFuT */}
-            <div className="min-h-screen lg:px-96 p-5">{children}</div>
+            {/* dpNFuT lg:px-96 */}
+            <div className="dpNFuT min-h-screen lg:px-64  p-5">{children}</div>
           </main>
         </Providers>
       </body>

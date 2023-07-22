@@ -16,11 +16,19 @@ const CourseAngularSection: FC<CourseAngularSectionProps> = ({}) => {
     >
       <Card
         hover={"scale"}
-        variant={"default"}
+        variant={"angular"}
         className="aspect-square flex flex-col justify-center items-center"
       >
         <Icons.NewTab />
-        Angular avanzado
+        <div className="flex gap-2 flex-col">
+          <div className="flex gap-3 text-2xl font-bold items-center">
+            <Icons.Coin />{" "}
+            <p>
+              Angular<br></br> advanced
+            </p>
+          </div>
+          <p className="text-xl">Linkedin | 2023</p>
+        </div>
       </Card>
     </Link>
   );

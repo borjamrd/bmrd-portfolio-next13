@@ -16,7 +16,7 @@ const GithubSection: FC<GithubSectionProps> = ({}) => {
     >
       <Card
         hover={"scale"}
-        variant={"secondary"}
+        variant={"dark"}
         className="h-full w-full flex flex-col justify-center items-center"
       >
         <div className="h-full w-full flex justify-center items-center">
