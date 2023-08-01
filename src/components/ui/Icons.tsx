@@ -163,7 +163,7 @@ const AvatarNotion = () => (
         height="140%"
         filterUnits="objectBoundingBox"
         primitiveUnits="userSpaceOnUse"
-        color-interpolation-filters="linearRGB"
+        colorInterpolationFilters="linearRGB"
       >
         {" "}
         <feMorphology
@@ -172,7 +172,7 @@ const AvatarNotion = () => (
           in="SourceAlpha"
           result="morphology"
         />{" "}
-        <feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />{" "}
+        <feFlood floodColor="#ffffff" floodOpacity="1" result="flood" />{" "}
         <feComposite
           in="flood"
           in2="morphology"
@@ -194,17 +194,17 @@ const AvatarNotion = () => (
         <g
           id="Face/-10"
           stroke="none"
-          stroke-width="1"
-          fill-rule="evenodd"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1"
+          fillRule="evenodd"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           {" "}
           <path
             d="M532,379 C664.54834,379 772,486.45166 772,619 C772,751.54834 684.54834,899 592,899 C535.13263,899 351.668898,801.612202 313.752775,718.980575 L313.322946,718.989282 L312,719 C267.81722,719 232,683.18278 232,639 C232,599.134956 261.158843,566.080325 299.312086,560.00055 C325.599297,455.979213 419.809919,379 532,379 Z M295.858895,624.545187 L304.141105,655.454813"
             id="Path"
             stroke="#000000"
-            stroke-width="24"
+            strokeWidth="24"
           />{" "}
         </g>{" "}
       </g>
@@ -213,14 +213,14 @@ const AvatarNotion = () => (
         <g id="Nose/ 13">
           <path
             id="Path"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M644 560C644 560 665.892 613.522 673 623C676 627 693.906 641.256 692.774 653.58C690.065 683.076 644 684.359 644 684.359C644 684.359 700 689.489 700 653.58C700 637.222 687 632 674 620C666.959 613.5 644 560 644 560Z"
             fill="black"
             stroke="black"
-            stroke-width="6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </g>{" "}
       </g>
@@ -230,18 +230,18 @@ const AvatarNotion = () => (
         <g
           id="Mouth/-0"
           stroke="none"
-          stroke-width="1"
+          strokeWidth="1"
           fill="none"
-          fill-rule="evenodd"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          fillRule="evenodd"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           {" "}
           <path
             d="M549,759 C576.33038,765.666667 599.663714,769 619,769 C638.336286,769 655.002953,765.666667 669,759"
             id="Path"
             stroke="#000000"
-            stroke-width="16"
+            strokeWidth="16"
           />{" "}
         </g>{" "}
       </g>
@@ -251,9 +251,9 @@ const AvatarNotion = () => (
         <g
           id="Eyes/-9"
           stroke="none"
-          stroke-width="1"
+          strokeWidth="1"
           fill="none"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         >
           {" "}
           <path
@@ -269,25 +269,25 @@ const AvatarNotion = () => (
           <g id="Group">
             <path
               id="Path"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M682.541 491.005C682.541 491.005 728.644 489.216 741.813 495.149C754.982 501.082 753.21 511.484 753.21 511.484C753.21 511.484 746.419 503.992 737.34 499.348C728.26 494.703 682.541 491.005 682.541 491.005Z"
               fill="black"
               stroke="black"
-              stroke-width="8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
               id="Path_2"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M595.459 491.005C595.459 491.005 549.356 489.216 536.187 495.149C523.018 501.082 524.79 511.484 524.79 511.484C524.79 511.484 531.581 503.992 540.66 499.348C549.74 494.703 595.459 491.005 595.459 491.005Z"
               fill="black"
               stroke="black"
-              stroke-width="8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </g>
         </g>{" "}
@@ -298,9 +298,9 @@ const AvatarNotion = () => (
         <g
           id="Glasses/-0"
           stroke="none"
-          stroke-width="1"
+          strokeWidth="1"
           fill="none"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         />{" "}
       </g>
       <g id="notion-avatar-hair">
@@ -308,14 +308,14 @@ const AvatarNotion = () => (
         <g id="Hairstyle/ 51">
           <path
             id="Path"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M382.001 274C429.761 244.346 494.39 241.407 575.889 265.181L577.14 264.65C597.829 255.949 630.441 246.059 677.001 272C747.001 311 754.98 383.101 781.001 387C799.46 389.766 805.56 435.498 822.001 477C828.104 492.404 867.001 502 867.001 502L822.001 521C822.001 521 831.927 531.092 845.001 539C856.33 545.852 876.001 570 876.001 570C876.001 570 833.793 577.748 828.001 590C824.892 596.577 861.406 604.103 872.001 648C886.001 706 839.99 786.03 868.953 803.495C882.072 811.406 916.953 833.495 916.953 833.495C916.953 833.495 864.775 885.051 840.953 878.495C804.135 868.363 756.953 833.495 756.953 833.495C756.953 833.495 768.409 700.557 764.001 625C760.916 572.103 746.184 514.788 732.001 493C697.561 440.091 627.001 387 540.001 387C473.08 387 468.925 425.463 468.925 425.463C465.119 446.727 465.116 469.946 450.001 502C423.775 557.618 331.05 595.505 331.05 624.505C331.05 653.505 340.05 654.505 340.05 670.505C340.05 686.505 328.02 694.862 331.05 716.505C333.07 730.933 344.021 804.095 360.001 825C332.475 852.867 306.808 870.534 283.001 878C259.195 885.466 228.528 885.466 191.001 878C200.307 869.655 206.974 861.989 211.001 855L211.393 854.308C215.33 847.232 219.867 835.462 225.001 819C218.698 825.705 212.365 830.371 206.001 833C199.637 835.628 190.637 837.295 179.001 838L181.003 835.564C186.363 829.017 190.521 823.735 193.477 819.717L194.434 818.408C199.252 811.846 203.628 806.7 201.001 796C198.297 784.981 163.573 686.372 165.05 653.505C166.035 631.593 176.701 599.259 197.05 556.505C193.586 560.378 189.586 563.378 185.05 565.505C180.513 567.631 173.847 569.631 165.05 571.505L166.29 570.4C177.121 560.712 184.708 552.746 189.05 546.505C193.556 540.027 196.222 533.027 197.05 525.505C190.855 527.314 185.855 527.98 182.05 527.505C178.244 527.029 172.578 525.029 165.05 521.505L166.345 520.889C174.864 516.82 181.099 513.358 185.05 510.505C189.198 507.508 194.532 502.508 201.05 495.505L202.221 492.969C221.276 451.815 236.552 423.661 248.05 408.505C280.199 366.126 314.722 340.408 344.05 318.505C360.26 306.398 368.717 282.248 382.001 274Z"
             fill="black"
             stroke="black"
-            stroke-width="12"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="12"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </g>{" "}
       </g>
@@ -325,9 +325,9 @@ const AvatarNotion = () => (
         <g
           id="Accessories/-0"
           stroke="none"
-          stroke-width="1"
+          strokeWidth="1"
           fill="none"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         />{" "}
       </g>
       <g id="notion-avatar-details">
@@ -336,25 +336,25 @@ const AvatarNotion = () => (
           <g id="Group">
             <path
               id="Path"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M511.307 445.692C511.307 445.692 487.802 466.737 479.157 484.515C470.511 502.293 465.201 540.499 465.201 540.499C465.201 540.499 474.765 503.28 482.827 486.703C490.889 470.125 511.307 445.692 511.307 445.692Z"
               fill="black"
               stroke="black"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
               id="Path_2"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M478.14 452.968C478.14 452.968 468.587 468.207 465.775 476.369C462.963 484.53 460.527 497.199 462.555 498.204C464.582 499.21 465.445 484.848 467.592 477.026C469.739 469.204 478.14 452.968 478.14 452.968Z"
               fill="black"
               stroke="black"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </g>
         </g>{" "}
@@ -365,9 +365,9 @@ const AvatarNotion = () => (
         <g
           id="Beard/-0"
           stroke="none"
-          stroke-width="1"
+          strokeWidth="1"
           fill="none"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         />{" "}
       </g>
       <g id="notion-avatar-christmas">
@@ -378,7 +378,7 @@ const AvatarNotion = () => (
           stroke="none"
           strokeWidth="1"
           fill="none"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         />{" "}
       </g>{" "}
     </g>{" "}

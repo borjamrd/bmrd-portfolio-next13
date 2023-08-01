@@ -19,7 +19,8 @@ const CodeSection: FC<CodeSectionProps> = ({}) => {
         className="h-full w-full flex flex-col justify-center items-center"
       >
         <Icons.NewTab />
-        <p className="text-3xl font-bold">CodeSignal</p>
+        <p className="text-4xl font-bold mb-1">CodeSignal</p>
+        <p className="text-xl">Code exercises and katas</p>
       </Card>
     </Link>
   );

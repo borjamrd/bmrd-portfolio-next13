@@ -1,9 +1,12 @@
+"use client";
+
 import Providers from "@/components/Providers";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { AnimatePresence } from "framer-motion";
 import NextBreadcrumbs from "@/components/Breadcrumbs";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,17 +23,24 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head></head>
       <body>
         <Providers>
-          <main
-            className={cn(
-              inter.className,
-              "bg-opacity-20 min-h-screen transition-colors ease-in-out duration-5000 text-cyan-100  dark:text-slate-100 bg-gradient-to-br from-slate-100 via-blue-300 to-teal-400  dark:from-slate-950 dark:via-slate-700 dark:to-slate-950"
-            )}
-          >
-            {/* dpNFuT lg:px-96 */}
-            <div className="dpNFuT min-h-screen lg:px-64  p-5">{children}</div>
-          </main>
+          <AnimatePresence mode="wait">
+            <main
+              className={cn(
+                inter.className,
+                "min-h-screen transition-colors ease-in-out duration-5000 text-cyan-100  dark:text-slate-100 bg-gradient-to-br from-slate-100 via-blue-300 to-teal-400  dark:from-black dark:to-[#111111]"
+              )}
+            >
+              {/* dpNFuT lg:px-96 */}
+
+              <div className="dpNFuT min-h-screen lg:px-64 p-5">
+                <NextBreadcrumbs />
+                {children}
+              </div>
+            </main>
+          </AnimatePresence>
         </Providers>
       </body>
     </html>

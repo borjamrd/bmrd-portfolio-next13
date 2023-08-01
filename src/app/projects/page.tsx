@@ -1,3 +1,4 @@
+import getProjects from "@/lib/getProjects";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -5,7 +6,9 @@ export const metadata: Metadata = {
   description: "text",
 };
 
-const page = ({}) => {
+const page = async ({}) => {
+  const projects = await getProjects();
+  console.log(projects);
   return <div>projects works</div>;
 };
 

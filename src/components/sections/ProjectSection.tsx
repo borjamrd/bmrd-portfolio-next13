@@ -16,9 +16,9 @@ const ProjectSection: FC<ProjectSectionProps> = ({}) => {
     >
       <Card
         variant={"secondary"}
-        className="relative h-full w-full flex flex-col justify-center items-center"
+        className="relative h-full w-full flex flex-col justify-end items-center p-2"
       >
-        <div className="h-full w-full absolute opacity-60 z-0 ">
+        <div className="h-full w-full absolute opacity-40 z-0 ">
           <Image
             src={projects}
             alt="Picture of the author"
@@ -33,8 +33,8 @@ const ProjectSection: FC<ProjectSectionProps> = ({}) => {
         <div className="p-4 z-10">
           <h3 className="font-bold text-5xl mb-2">Projects & stuff</h3>
           <p className="text-2xl">
-            Here you can find my latests projects. Take a look also to my Github
-            profile.
+            Here you can find my latests projects and ideas. Some of them work
+            and some of them... well go & check it
           </p>
         </div>
       </Card>

@@ -21,7 +21,8 @@ module.exports = {
         'light-gold': '#f5bc51',
         'dark-gold': '#533519',
         'discord': '#7289da',
-        'discord-dark': '#282b30'
+        'discord-dark': '#282b30',
+        'accents-1': '#333',
       },
       aspectRatio: {
         '4/3': '4 / 3',
@@ -29,6 +30,10 @@ module.exports = {
         '3/1': '3 / 1',
         '2/1': '2 / 1',
         '5/1': '5 / 1',
+      },
+      borderWidth: {
+        '2/1': '0.125rem',
+
       }
     },
   },

@@ -1,23 +1,17 @@
-import Card from "@/components/ui/Card";
-import dynamic from "next/dynamic";
-import { cardVariants } from "@/components/ui/Card";
-import Link from "next/link";
-import { Icons } from "@/components/ui/Icons";
-import ToggleSection from "@/components/sections/ToggleSection";
-import LinkedinSection from "@/components/sections/LinkedinSection";
-import HeroSection from "@/components/sections/HeroSection";
+import CodeSection from "@/components/sections/CodeSection";
+import CourseAngularSection from "@/components/sections/CourseAngularSection";
+import CourseNodeSection from "@/components/sections/CourseNodeSection";
 import CvSection from "@/components/sections/CvSection";
+import DiscordSection from "@/components/sections/DiscordSection";
+import FormSection from "@/components/sections/FormSection";
 import GithubSection from "@/components/sections/GithubSection";
+import HeroSection from "@/components/sections/HeroSection";
+import LinkedinSection from "@/components/sections/LinkedinSection";
 import MailSection from "@/components/sections/MailSection";
+import NotionSection from "@/components/sections/NotionSection";
 import ProjectSection from "@/components/sections/ProjectSection";
 import TechSection from "@/components/sections/TechSection";
-import SpotifySection from "@/components/sections/SpotifySection";
-import DiscordSection from "@/components/sections/DiscordSection";
-import CourseNodeSection from "@/components/sections/CourseNodeSection";
-import CourseAngularSection from "@/components/sections/CourseAngularSection";
-import NotionSection from "@/components/sections/NotionSection";
-import CodeSection from "@/components/sections/CodeSection";
-import FormSection from "@/components/sections/FormSection";
+import ToggleSection from "@/components/sections/ToggleSection";
 
 export default function Home() {
   return (
