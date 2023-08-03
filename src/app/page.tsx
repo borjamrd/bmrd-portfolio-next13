@@ -19,7 +19,7 @@ export default function Home() {
       <div className="min-h-screen flex flex-col">
         <section className="h-full grid auto-rows-max grid-cols-3 gap-2 lg:grid-cols-5 md:gap-4 py-5 container">
           <HeroSection />
-          <ToggleSection />
+          {/* <ToggleSection /> */}
           <LinkedinSection />
           <CvSection />
           <GithubSection />

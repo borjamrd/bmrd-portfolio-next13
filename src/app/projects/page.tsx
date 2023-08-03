@@ -1,4 +1,5 @@
 import ProjectCard from "@/components/sections/ProjectCard";
+import LargeHeading from "@/components/ui/headings/LargeHeading";
 import getProjects from "@/lib/getProjects";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -25,11 +26,14 @@ const page = async ({}) => {
   const projects: Project[] = data.projects;
   console.log("TEST", projects);
   return (
-    <>
-      {projects?.map((project: Project) => (
-        <ProjectCard key={project._id} project={project} />
-      ))}
-    </>
+    <div>
+      <LargeHeading className="mt-20 mb-10">Projects</LargeHeading>
+      <div className="grid grid-cols-3 gap-4">
+        {projects?.map((project: Project) => (
+          <ProjectCard key={project._id} project={project} />
+        ))}
+      </div>
+    </div>
   );
 };
 

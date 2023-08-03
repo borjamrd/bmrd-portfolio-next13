@@ -2,6 +2,8 @@ import { useRouter } from "next/navigation";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import { FC } from "react";
 import Link from "next/link";
+import ToggleSection from "./sections/ToggleSection";
+import Card from "./ui/Card";
 
 interface BreadcrumbsProps {}
 
@@ -23,11 +25,19 @@ const NextBreadcrumbs: FC<BreadcrumbsProps> = ({}) => {
   //   });
 
   return (
-    <div className="mx-auto flex max-w-full items-center px-6 py-2 rounded-lg lg:px-8 bg-slate-800">
-      <button className="btn btn-xs" onClick={() => router.back()}>
-        Atrás
-      </button>
-      {/* {crumbs} */}
+    <div className="flex gap-2 mb-10">
+      <Card
+        variant={"dark"}
+        className="aspect-auto flex w-11/12 items-center px-6 py-2 lg:px-8"
+      >
+        <button className="btn btn-xs" onClick={() => router.back()}>
+          Atrás
+        </button>
+        {/* {crumbs} */}
+      </Card>
+      <div className="w-1/12">
+        <ToggleSection />
+      </div>
     </div>
   );
 };
