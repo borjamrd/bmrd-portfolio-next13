@@ -16,7 +16,7 @@ const ProjectSection: FC<ProjectSectionProps> = ({}) => {
     >
       <Card
         variant={"secondary"}
-        className="relative h-full w-full flex flex-col justify-end items-center p-2"
+        className="relative hover:col-span-2 h-full w-full flex flex-col justify-end items-center p-2"
       >
         <div className="h-full w-full absolute opacity-40 z-0 ">
           <Image
@@ -30,9 +30,11 @@ const ProjectSection: FC<ProjectSectionProps> = ({}) => {
           />
         </div>
         <Icons.NewTab />
-        <div className="p-4 z-10">
-          <h3 className="font-bold text-5xl mb-2">Projects & stuff</h3>
-          <p className="text-2xl">
+        <div className="lg:p-4 p-2 z-10">
+          <h3 className="font-bold lg:text-5xl text-xl mb-2">
+            Projects & stuff
+          </h3>
+          <p className="lg:text-2xl text-sm">
             Here you can find my latests projects and ideas. Some of them work
             and some of them... well go & check it
           </p>

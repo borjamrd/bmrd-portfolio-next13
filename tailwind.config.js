@@ -34,6 +34,9 @@ module.exports = {
       borderWidth: {
         '2/1': '0.125rem',
 
+      }, backdropBlur: {
+        xxs: '1px',
+        xs: '2px',
       }
     },
   },

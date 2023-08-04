@@ -1,7 +1,17 @@
+import { Project } from "@/app/projects/page";
+import axios from "axios";
+import { AxiosResponse } from "axios";
+
 export default async function getProjects() {
-  const resp = await fetch(`http://localhost:4500/projects`);
-  if (!resp.ok) {
-    throw new Error("failed to  fetch projects");
+  try {
+    const response = await axios.get(`${process.env.API_URL}/projects`);
+    return response.data;
+  } catch (error) {
+    throw new Error("erro");
   }
-  return await resp.json();
+  // const resp = await fetch(`${process.env.API_URL}/projects`);
+  // if (!resp.ok) {
+  //   throw new Error("failed to  fetch projects");
+  // }
+  // return await resp.json();
 }

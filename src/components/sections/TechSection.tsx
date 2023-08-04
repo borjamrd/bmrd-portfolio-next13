@@ -29,14 +29,13 @@ const TechSection: FC<TechSectionProps> = ({}) => {
       variant={"red"}
       className="col-span-3 md:col-span-3 md:row-span-1 aspect-3/1 md:aspect-auto flex"
     >
-      <div className="m-auto grid grid-cols-6 place-content-center text-4xl place-items-center gap-5 p-2">
+      <div className="m-auto grid grid-cols-6 place-content-center text-2xl sm:text-4xl place-items-center sm:gap-5 gap-2 p-2">
         <SiHtml5 title="html" />
         <SiCss3 title="css" />
         <SiJavascript title="javascript" />
         <SiTypescript title="typescript" />
         <SiAngular title="angular" />
         <SiReact title="react" />
-
         <SiNextdotjs title="next" />
         <SiTailwindcss title="tailwind" />
         <SiBootstrap title="bootstrap" />

@@ -5,7 +5,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 export const cardVariants = cva(
-  "border border-2/1 border-slate-200 dark:border-slate-400 backdrop-filter backdrop-blur-sm shadow shadow-slate-700 rounded-3xl overflow-hidden",
+  "border border-2/1 border-slate-200 dark:border-slate-400 backdrop-filter backdrop-blur-xs shadow shadow-slate-700 rounded-3xl overflow-hidden",
   {
     variants: {
       variant: {

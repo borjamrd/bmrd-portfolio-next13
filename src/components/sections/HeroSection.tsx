@@ -7,9 +7,12 @@ interface HeroSectionProps {}
 
 const HeroSection: FC<HeroSectionProps> = ({}) => {
   return (
-    <div className="relative md:col-span-4 row-span-2 col-span-3 aspect-4/3  lg:aspect-auto">
+    <Card
+      variant={"transparent"}
+      className="relative md:col-span-4 row-span-2 col-span-3 aspect-auto"
+    >
       <div className="h-full w-full flex justify-end items-end">
-        <p className="text-6xl text-slate-600 dark:text-slate-300  rounded-3xl font-semibold bg-opacity-10 p-10">
+        <p className="xl:text-5xl lg:text-3xl text-2xl text-slate-600 dark:text-slate-300  rounded-3xl font-semibold bg-opacity-10 lg:p-10 p-5">
           Hi 👋, Im Borja.{" "}
           <span className="text-slate-800 dark:text-yellow-300">
             Fullstack developer.
@@ -23,7 +26,7 @@ const HeroSection: FC<HeroSectionProps> = ({}) => {
           <Spline scene="https://prod.spline.design/2RoEGWy5S1OwjCxn/scene.splinecode" />
         </Suspense> *
       </div> */}
-    </div>
+    </Card>
   );
 };
 

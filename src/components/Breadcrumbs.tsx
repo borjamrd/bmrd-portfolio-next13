@@ -4,13 +4,15 @@ import { FC } from "react";
 import Link from "next/link";
 import ToggleSection from "./sections/ToggleSection";
 import Card from "./ui/Card";
+import Button from "./ui/buttons/Button";
+import Badge from "./ui/badges/Badge";
 
 interface BreadcrumbsProps {}
 
 const NextBreadcrumbs: FC<BreadcrumbsProps> = ({}) => {
   const router = useRouter();
 
-  // let currentLink: any = "";
+  let currentLink: any = "";
   // const loc = location;
   // const crumbs = loc.pathname
   //   .split("/")
@@ -18,21 +20,19 @@ const NextBreadcrumbs: FC<BreadcrumbsProps> = ({}) => {
   //   .map((crumb) => {
   //     currentLink = `/${crumb}`;
   //     return (
-  //       <div className="ms-2 btn btn-xs btn-neutral" key={crumb}>
+  //       <Badge variant={"dark"} className="ms-2" key={crumb}>
   //         <Link href={currentLink}>/ {crumb}</Link>
-  //       </div>
+  //       </Badge>
   //     );
   //   });
 
   return (
-    <div className="flex gap-2 mb-10">
+    <div className="flex gap-2 mb-10 sticky top-5 z-30">
       <Card
-        variant={"dark"}
-        className="aspect-auto flex w-11/12 items-center px-6 py-2 lg:px-8"
+        variant={"transparent"}
+        className="aspect-auto backdrop-blur-xl flex w-11/12 items-center px-6 py-2 lg:px-8"
       >
-        <button className="btn btn-xs" onClick={() => router.back()}>
-          Atrás
-        </button>
+        <Button onClick={() => router.back()}>Atrás</Button>
         {/* {crumbs} */}
       </Card>
       <div className="w-1/12">
