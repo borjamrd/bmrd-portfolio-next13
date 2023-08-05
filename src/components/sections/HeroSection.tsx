@@ -12,7 +12,7 @@ const HeroSection: FC<HeroSectionProps> = ({}) => {
       className="relative md:col-span-4 row-span-2 col-span-3 aspect-auto"
     >
       <div className="h-full w-full flex justify-end items-end">
-        <p className="xl:text-5xl lg:text-3xl text-2xl text-slate-600 dark:text-slate-300  rounded-3xl font-semibold bg-opacity-10 lg:p-10 p-5">
+        <p className="xl:text-6xl lg:text-3xl text-2xl text-slate-600 dark:text-slate-300  rounded-3xl font-semibold bg-opacity-10 lg:p-10 p-5">
           Hi 👋, Im Borja.{" "}
           <span className="text-slate-800 dark:text-yellow-300">
             Fullstack developer.

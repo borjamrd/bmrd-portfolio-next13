@@ -43,6 +43,8 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           className="object-cover backdrop-blur-sm rounded-3xl group-hover:rounded-2xl ease-in-out duration-200 opacity-30 group-hover:opacity-100"
           src={project.projectImage}
           fill={true}
+          sizes="(min-width: 808px) 50vw, 100vw"
+          priority={false}
           alt={project.subtitle}
         />
       </div>

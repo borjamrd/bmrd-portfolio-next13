@@ -1,32 +1,54 @@
-import { FC } from "react";
-import { Toaster } from "react-hot-toast";
+/* eslint-disable react/no-unescaped-entities */
+"use client";
+
+import Link from "next/link";
+import { FC, useEffect } from "react";
+import toast, { Toaster } from "react-hot-toast";
+import { BsBoxArrowInUpRight } from "react-icons/bs";
+import { TfiClose } from "react-icons/tfi";
 
 interface ToastProps {}
 
-const Toast: FC<ToastProps> = ({}) => {
+const Message = () => {
   return (
-    <Toaster
-      position="top-center"
-      reverseOrder={false}
-      gutter={8}
-      containerClassName=""
-      containerStyle={{}}
-      toastOptions={{
-        // Define default options
-        className: "",
-        duration: 5000,
-        style: {
-          background: "#363636",
-          color: "#fff",
-        },
-
-        // Default options for specific types
-        success: {
-          duration: 3000,
-        },
-      }}
-    />
+    <div className="relative border-green-900 border-2/1 shadow shadow-slate-700 bg-green-400/20 p-4 rounded-xl text-slate-900">
+      <button
+        className="absolute top-1 right-1 bg-transparent p-2"
+        onClick={() => toast.dismiss()}
+      >
+        <TfiClose className="text-slate-900 dark:text-slate-100" />
+      </button>
+      <div className="pe-2 w-44 mb-2 dark:text-slate-100">
+        👋 Hey buddy! Hope you're enjoying. Could you give me a Github start?
+      </div>
+      <div>
+        <Link
+          className="flex gap-2 text-wrap items-center px-2 py-0.5 w-fit bg-white border-slate-800 border rounded hover:bg-success hover:text-white hover:border-green-700"
+          target="_blank"
+          href={"https://github.com/borjamrd"}
+          onClick={() => toast.dismiss()}
+        >
+          Shure!
+          <BsBoxArrowInUpRight />
+        </Link>
+      </div>
+    </div>
   );
+};
+
+const Toast: FC<ToastProps> = ({}) => {
+  const toastOptions = {
+    duration: 30000,
+  };
+
+  useEffect(() => {
+    const toastTimeout = setTimeout(() => {
+      toast.custom(<Message />);
+    }, 1000);
+    return () => clearTimeout(toastTimeout);
+  }, []);
+
+  return <Toaster position="bottom-right" toastOptions={toastOptions} />;
 };
 
 export default Toast;

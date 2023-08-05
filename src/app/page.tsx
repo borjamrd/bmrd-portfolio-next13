@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <div className="min-h-screen flex flex-col">
-        <section className="h-full grid auto-rows-max grid-cols-3 gap-2 lg:grid-cols-5 md:gap-4 py-5 container">
+        <section className="h-full grid auto-rows-max grid-cols-3 gap-2 lg:grid-cols-5 md:gap-4 xl:py-5 py-4 container">
           <HeroSection />
           {/* <ToggleSection /> */}
           <LinkedinSection />

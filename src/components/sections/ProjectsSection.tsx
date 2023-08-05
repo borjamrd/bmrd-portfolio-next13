@@ -2,11 +2,11 @@
 
 import { Project } from "@/app/projects/page";
 import { FC, useContext, useEffect, useState } from "react";
-import { Toaster, toast } from "react-hot-toast";
-import { TfiClose } from "react-icons/tfi";
+
 import { ProjectContext } from "../ProjectProvider";
 import SelectedProject from "../SelectedProject";
 import ProjectCard from "./ProjectCard";
+import Toast from "../ui/Toast";
 
 interface ProjectsSectionProps {
   projects: Project[];
@@ -14,36 +14,16 @@ interface ProjectsSectionProps {
 
 const ProjectsSection: FC<ProjectsSectionProps> = ({ projects }) => {
   const { selectedProject, setSelectedProject } = useContext(ProjectContext);
-
   const [twoColumns, setTwoColumns] = useState(false);
-  const toastOptions = {
-    duration: 30000,
-  };
+
   useEffect(() => {
     if (selectedProject) {
-      console.log("selected project", selectedProject);
       setTwoColumns(true);
     } else {
       setTwoColumns(false);
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [selectedProject]);
-  useEffect(() => {
-    const toastTimeout = setTimeout(() => {
-      toast.custom(
-        <div className="relative bg-green-400 p-4 rounded-xl text-slate-900">
-          <button
-            className="absolute top-1 right-1 bg-transparent p-2"
-            onClick={() => toast.dismiss()}
-          >
-            <TfiClose className="text-slate-900 dark:text-slate-100" />
-          </button>
-          <div>👋 hey buddy</div>
-        </div>
-      );
-    }, 30000);
-    return () => clearTimeout(toastTimeout);
-  }, []);
 
   return (
     <>
@@ -70,7 +50,7 @@ const ProjectsSection: FC<ProjectsSectionProps> = ({ projects }) => {
           </div>
         )}
       </div>
-      <Toaster position="bottom-right" toastOptions={toastOptions} />
+      <Toast />
     </>
   );
 };

@@ -7,7 +7,13 @@ interface CvSectionProps {}
 
 const CvSection: FC<CvSectionProps> = ({}) => {
   return (
-    <Link href={"/cv"} rel="noopener noreferrer" target="blank">
+    <Link
+      href={
+        "https://drive.google.com/file/d/16B1mBLTP0-WZ8YJVndDhruRAibRNzhgb/view?usp=sharing"
+      }
+      rel="noopener noreferrer"
+      target="blank"
+    >
       <Card
         hover={"scale"}
         variant={"dark"}

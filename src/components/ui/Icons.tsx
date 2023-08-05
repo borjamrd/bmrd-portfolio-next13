@@ -32,6 +32,74 @@ const Coin = () => (
   </svg>
 );
 
+import React from "react";
+export interface IconInterface {
+  size: any;
+  fill: any;
+  className: string;
+  width: string | number;
+  height: string | number;
+}
+const Diploma = ({
+  size,
+  fill,
+  className,
+  width,
+  height,
+}: Partial<IconInterface>) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      viewBox="0 0 512 512"
+      xmlSpace="preserve"
+      className={className}
+    >
+      <path
+        fill="#FFBA00"
+        d="M87.507 494.871L104.634 511.998 512 104.632 494.873 87.505 283.802 283.8z"
+      ></path>
+      <path
+        fill="#FDE09C"
+        d="M477.746 70.378L259.286 259.284 70.38 477.744 87.507 494.871 494.873 87.505z"
+      ></path>
+      <path
+        fill="#FFBA00"
+        d="M35.19 442.554L70.38 477.744 477.746 70.378 442.556 35.188 224.096 224.094z"
+      ></path>
+      <path
+        fill="#FDE09C"
+        d="M-66.773 196.395H509.326V246.161H-66.773z"
+        transform="rotate(134.999 221.278 221.279)"
+      ></path>
+      <path
+        fill="#FF4F67"
+        d="M241.433 270.985L346.882 346.88 391.272 327.345 288.172 224.245z"
+      ></path>
+      <path
+        fill="#FF6E7A"
+        d="M224.247 288.171L327.347 391.271 346.882 346.88 256.21 256.208z"
+      ></path>
+      <path
+        fill="#FF0F4D"
+        d="M169.064 169.063l40.258 69.812 71.698 42.144c30.915-30.915 30.915-81.039 0-111.956-30.915-30.916-81.04-30.916-111.956 0z"
+      ></path>
+      <path
+        fill="#FF4F67"
+        d="M169.064 281.018c30.915 30.915 81.039 30.915 111.956 0L169.064 169.063c-30.915 30.915-30.915 81.04 0 111.955z"
+      ></path>
+      <path
+        fill="#FF8E00"
+        d="M200.352 200.35l8.964 38.519 40.417 10.863c13.636-13.636 13.636-35.745 0-49.382s-35.745-13.637-49.381 0z"
+      ></path>
+      <path
+        fill="#FFBA00"
+        d="M200.351 249.731c13.636 13.636 35.745 13.636 49.382 0l-49.382-49.382c-13.636 13.637-13.636 35.746 0 49.382z"
+      ></path>
+    </svg>
+  );
+};
+
 const Github = () => (
   <svg
     stroke="currentColor"
@@ -103,7 +171,7 @@ const DownLoad = () => (
     stroke="currentColor"
     height="1em"
     width="1em"
-    className="absolute right-4 bottom-4 top-auto md:right-5 md:top-5 text-xl text-white dark:text-[#ffffffaa]"
+    className="absolute right-2 bottom-2 top-auto md:right-5 md:top-5 text-xl text-white dark:text-[#ffffffaa]"
   >
     <path
       strokeLinecap="round"
@@ -134,7 +202,7 @@ const NewTab = () => (
     fill="currentColor"
     strokeWidth="0"
     viewBox="0 0 24 24"
-    className="absolute right-4 bottom-4 top-auto md:right-5 md:top-5 text-xl text-white dark:text-[#ffffffaa]"
+    className="absolute right-2 bottom-2 top-auto md:right-5 md:top-5 text-xl text-white dark:text-[#ffffffaa]"
     height="1em"
     width="1em"
     xmlns="http://www.w3.org/2000/svg"
@@ -384,6 +452,7 @@ const AvatarNotion = () => (
     </g>{" "}
   </svg>
 );
+
 export const Icons = {
   Linkedin,
   NewTab,
@@ -394,4 +463,5 @@ export const Icons = {
   Discord,
   AvatarNotion,
   Coin,
+  Diploma,
 };
