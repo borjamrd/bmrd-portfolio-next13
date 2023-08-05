@@ -19,7 +19,7 @@ const Message = () => {
         <TfiClose className="text-slate-900 dark:text-slate-100" />
       </button>
       <div className="pe-2 w-44 mb-2 dark:text-slate-100">
-        👋 Hey buddy! Hope you're enjoying. Could you give me a Github start?
+        👋 Hi! Hope you're enjoying. Could you give me a Github start?
       </div>
       <div>
         <Link
@@ -28,7 +28,7 @@ const Message = () => {
           href={"https://github.com/borjamrd"}
           onClick={() => toast.dismiss()}
         >
-          Shure!
+          Sure!
           <BsBoxArrowInUpRight />
         </Link>
       </div>

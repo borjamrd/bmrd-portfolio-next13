@@ -1,5 +1,7 @@
+"use client";
+
 import axios from "axios";
-import { use, useState } from "react";
+import { useState } from "react";
 // `${process.env.API_URL}/leads/lead`
 
 export interface Lead {
@@ -11,9 +13,7 @@ export function usePostLead() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<any>(null);
 
-  const url = `${process.env.API_URL}/leads/lead`;
-
-  const postData = async (url: string, body: Lead) => {
+  const postData = async (url: any, body: Lead) => {
     setIsLoading(true);
     setError(null);
 

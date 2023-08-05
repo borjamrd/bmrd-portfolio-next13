@@ -1,63 +1,76 @@
 "use client";
 
 import { Lead, usePostLead } from "@/lib/sendLead";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import Card from "../ui/Card";
 import { Input } from "../ui/Input";
+import toast, { Toaster } from "react-hot-toast";
 
 interface FormSectionProps {}
 
 const FormSection: FC<FormSectionProps> = ({}) => {
   const { register, handleSubmit } = useForm<Lead>();
   const { postData, error, isLoading } = usePostLead();
+  const [sended, setSended] = useState(false);
 
-  const URL = `${process.env.API_URL}/leads/lead`;
-
-  const onSubmit: SubmitHandler<Lead> = (lead: Lead) => {
-    postData(URL, lead)
-      .then((response) => {
-        console.log("Posted data:", response);
-        // Handle success
-      })
-      .catch((error) => {
-        console.error("Error posting data:", error);
-        // Handle error
-      });
+  const URL = `${process.env.NEXT_PUBLIC_API_URL}/leads/lead`;
+  const onSubmit: SubmitHandler<Lead> = async (lead: Lead) => {
+    try {
+      const response = await postData(URL, lead);
+      console.log(response);
+      if (response?.status === "Lead created succesfully") {
+        setSended(true);
+        toast.success("Alllllllllright! Information sended");
+      }
+    } catch (error) {
+      toast.error("Sorry buddy, technical problems");
+    }
   };
 
+  console.log(error);
+
   return (
-    <Card className="col-span-3 md:col-span-5 md:row-span-1 aspect-auto flex flex-col justify-center items-center p-2 lg:px-10 lg:py-20">
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col lg:flex-row gap-2 flex-nowrap"
-      >
-        <Input
-          title="name"
-          placeholder="Name"
-          {...register("name", { required: true })}
-        />
-        <Input
-          title="name"
-          placeholder="Lastname"
-          {...register("lastname", { required: true })}
-        />
-        <Input
-          title="name"
-          placeholder="Email"
-          {...register("email", { required: true })}
-        />
-        {isLoading ? (
-          <button className="flex flex-nowrap gap-1">
-            <span className="loading loading-spinner text-slate-100"></span>
-            Sending
-          </button>
-        ) : (
-          <button type="submit">SEND</button>
+    <>
+      <Card className="col-span-3 md:col-span-5 md:row-span-1 aspect-auto flex flex-col justify-center items-center p-2 lg:px-10 lg:py-20">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="flex flex-col lg:flex-row gap-2 flex-nowrap"
+        >
+          <Input
+            title="name"
+            placeholder="Name"
+            {...register("name", { required: true })}
+          />
+          <Input
+            title="name"
+            placeholder="Lastname"
+            {...register("lastname", { required: true })}
+          />
+          <Input
+            title="name"
+            placeholder="Email"
+            {...register("email", { required: true })}
+          />
+          {isLoading ? (
+            <button className="flex flex-nowrap gap-1">
+              <span className="loading loading-spinner text-slate-100"></span>
+              Sending
+            </button>
+          ) : (
+            <button type="submit">SEND</button>
+          )}
+        </form>
+        {sended && (
+          <div className="mt-4 rounded-xl bg-green-400/10  text-base text-green-100 px-4 py-3 flex">
+            <span className="m-auto">
+              Great! Information on way. You will get a confirmation email.{" "}
+            </span>
+          </div>
         )}
-      </form>
-      {error && {}}
-    </Card>
+      </Card>
+      <Toaster position="bottom-right" />
+    </>
   );
 };
 

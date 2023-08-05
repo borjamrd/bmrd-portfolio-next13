@@ -7,6 +7,8 @@ import { ProjectContext } from "../ProjectProvider";
 import SelectedProject from "../SelectedProject";
 import ProjectCard from "./ProjectCard";
 import Toast from "../ui/Toast";
+import Card from "../ui/Card";
+import { Input } from "../ui/Input";
 
 interface ProjectsSectionProps {
   projects: Project[];
@@ -14,7 +16,23 @@ interface ProjectsSectionProps {
 
 const ProjectsSection: FC<ProjectsSectionProps> = ({ projects }) => {
   const { selectedProject, setSelectedProject } = useContext(ProjectContext);
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects);
+
   const [twoColumns, setTwoColumns] = useState(false);
+  const [tags, setTags] = useState<string[]>([]);
+
+  useEffect(() => {
+    setProjectTags();
+  }, []);
+
+  const setProjectTags = () => {
+    const alltags: any[] = [];
+    projects.forEach((project) => {
+      alltags.push(project.tags);
+    });
+    const tags: any[] = [...new Set(alltags.flat())];
+    setTags(tags);
+  };
 
   useEffect(() => {
     if (selectedProject) {
@@ -25,8 +43,31 @@ const ProjectsSection: FC<ProjectsSectionProps> = ({ projects }) => {
     }
   }, [selectedProject]);
 
+  const handleChange = (e: any) => {
+    let searchedString: string = e.target.value.toLowerCase();
+
+    const filterByName = (project: Project) =>
+      project.name.toLowerCase().includes(searchedString);
+
+    const filterByTag = (project: Project) =>
+      project.tags.some((tag) => tag.toLowerCase().includes(searchedString));
+
+    let filtered = projects.filter(
+      (project) => filterByName(project) || filterByTag(project)
+    );
+
+    setFilteredProjects(filtered);
+  };
+
   return (
     <>
+      <div className="p-4 flex justify-center items-center mb-4 gap-4">
+        <Input
+          onChange={(e) => handleChange(e)}
+          placeholder="Search by name or technology"
+          className="w-1/2 text-center text-slate-900 dark:text-slate-100"
+        ></Input>
+      </div>
       <div className="flex flex-col-reverse lg:flex-row lg:gap-4 gap-2">
         <div
           className={`grid grid-cols-2   ${
@@ -37,7 +78,7 @@ const ProjectsSection: FC<ProjectsSectionProps> = ({ projects }) => {
               : "w-full lg:grid-cols-3"
           }`}
         >
-          {projects?.map((project: Project) => (
+          {filteredProjects?.map((project: Project) => (
             <ProjectCard key={project._id} project={project} />
           ))}
         </div>
@@ -50,6 +91,11 @@ const ProjectsSection: FC<ProjectsSectionProps> = ({ projects }) => {
           </div>
         )}
       </div>
+      {filteredProjects.length === 0 && (
+        <div className="mt-4 text-center text-2xl text-slate-500">
+          No projects founded
+        </div>
+      )}
       <Toast />
     </>
   );

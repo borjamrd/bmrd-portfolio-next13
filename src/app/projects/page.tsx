@@ -26,7 +26,10 @@ const page = async ({}) => {
 
   return (
     <div>
-      <LargeHeading className="mt-20 mb-10">Projects</LargeHeading>
+      <div className="flex mt-20 mb-10">
+        <LargeHeading className="mx-auto">Projects</LargeHeading>
+      </div>
+
       <ProjectsSection projects={projects} />
     </div>
   );
