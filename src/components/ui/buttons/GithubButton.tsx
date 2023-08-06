@@ -11,7 +11,7 @@ const GithubButton: FC<GithubButtonProps> = ({ githubUrl }) => {
     <Link
       href={githubUrl}
       target="_blank"
-      className="-rotate-45 group-hover:rotate-0 duration-200 aspect-square flex lg:rounded-2xl rounded-xl  bg-slate-900 lg:p-2 p-1"
+      className="-rotate-45 active:border-2 active:border-slate-900 group-hover:rotate-0 duration-200 aspect-square flex lg:rounded-2xl rounded-xl bg-gradient-to-br from-rose-800 to-orange-300 hover:bg:gradient-to-br hover:from-rose-600 hover:to-orange-300  lg:p-2 p-1"
     >
       <SiGithub className="m-auto xl:text-4xl text-2xl"></SiGithub>
     </Link>

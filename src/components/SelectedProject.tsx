@@ -59,7 +59,7 @@ const SelectedProject: FC<SelectedProjectProps> = ({
       <div className="flex flex-col gap-2">
         {project.github && (
           <div className="flex flex-col">
-            <span className="items-center gap-1 flex text-nowrap text-xl text-slate-900 dark:text-yellow-300  font-semibold">
+            <span className="items-center gap-1 flex text-nowrap text-xl text-blue-900 dark:text-yellow-300  font-semibold">
               {" "}
               <SiGithub /> Github
             </span>
@@ -75,7 +75,7 @@ const SelectedProject: FC<SelectedProjectProps> = ({
         )}
         {project.urlProject && (
           <div className="flex flex-col">
-            <span className="items-center gap-1 flex text-nowrap text-xl text-slate-900 dark:text-yellow-300 font-semibold">
+            <span className="items-center gap-1 flex text-nowrap text-xl text-blue-900 dark:text-yellow-300 font-semibold">
               {" "}
               <AiFillEye />
               Full project

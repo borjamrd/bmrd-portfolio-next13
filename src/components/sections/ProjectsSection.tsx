@@ -71,7 +71,7 @@ const ProjectsSection: FC<ProjectsSectionProps> = ({ projects }) => {
       <div className="flex flex-col-reverse lg:flex-row lg:gap-4 gap-2">
         <div
           className={`auto-rows-max grid grid-cols-2   ${
-            twoColumns ? "two-columns" : ""
+            twoColumns ? "two-columns group/col" : ""
           } gap-2 lg:gap-4 ${
             twoColumns
               ? "w-full lg:w-1/2 lg:grid-cols-2"

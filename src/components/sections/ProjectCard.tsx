@@ -25,7 +25,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
     setSelectedProject(project);
   };
   return (
-    <div className="group  dark:bg-slate-950/75 hover:bg-transparent hover:dark:bg-transparent backdrop-blur-xxs border-2/1 lg:p-4 p-2 border-slate-200 dark:border-slate-400  relative flex items-end aspect-square rounded-3xl overflow-hidden dark:text-white text-gray-50 shadow-sm shadow-slate-700 ">
+    <div className="group  bg-blue-900/75 dark:bg-slate-950/75 hover:bg-transparent hover:dark:bg-transparent backdrop-blur-xxs border-2/1 lg:p-4 p-2 border-slate-200 dark:border-slate-400  relative flex items-end aspect-square rounded-3xl overflow-hidden dark:text-white text-gray-50 shadow-sm shadow-slate-700 ">
       <div className="absolute h-full w-full top-0 left-0 lg:group-hover:top-4 group-hover:top-2 lg:group-hover:p-4 group-hover:p-2 lggroup-hover:left-4 group-hover:left-2  duration-200 group-hover:h-1/2 group-hover:w-3/5">
         <div className="h-full group-hover:opacity-0 duration-75 w-full flex lg:p-10 p-4">
           <div className="m-auto flex gap-2 flex-wrap justify-center items-center">
@@ -56,11 +56,11 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           </div>
         </div>
         <div className="h-2/5">
-          <h4 className="text-slate-800 lg:text-3xl md:text-xl text-lg lg:leading-tight leading-none dark:text-slate-100 font-bold mb-1">
+          <h4 className="text-slate-800 customtitle xl:text-3xl md:text-xl text-lg lg:leading-tight leading-none dark:text-slate-100 font-bold mb-1">
             {project.name}
           </h4>
 
-          <p className="lg:flex hidden text-slate-900 lg:text-xl lg:font-semibold md:text-sm dark:text-slate-200 mb-2 ">
+          <p className="lg:flex hidden customdescription text-slate-900 lg:text-xl lg:font-semibold md:text-sm dark:text-slate-200 mb-2 ">
             {project.subtitle}
           </p>
         </div>

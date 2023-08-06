@@ -32,23 +32,26 @@ const FormSection: FC<FormSectionProps> = ({}) => {
 
   return (
     <>
-      <Card className="col-span-3 md:col-span-5 md:row-span-1 aspect-auto flex flex-col justify-center items-center p-2 lg:px-10 lg:py-20">
+      <Card className="col-span-3 md:col-span-5 md:row-span-1 aspect-auto flex flex-col justify-center items-center p-2 lg:px-10 py-6 lg:py-20">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col lg:flex-row gap-2 flex-nowrap"
         >
           <Input
+            className="border-white"
             title="name"
             placeholder="Name"
             {...register("name", { required: true })}
           />
           <Input
             title="name"
+            className="border-white"
             placeholder="Lastname"
             {...register("lastname", { required: true })}
           />
           <Input
             title="name"
+            className="border-white"
             placeholder="Email"
             {...register("email", { required: true })}
           />
@@ -58,7 +61,12 @@ const FormSection: FC<FormSectionProps> = ({}) => {
               Sending
             </button>
           ) : (
-            <button type="submit">SEND</button>
+            <button
+              className="h-10 rounded-md py-2 px-3 bg-blue-600 hover:bg-blue-400 active:border-blue-600 active:border-2"
+              type="submit"
+            >
+              SEND
+            </button>
           )}
         </form>
         {sended && (

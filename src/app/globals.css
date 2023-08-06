@@ -61,4 +61,14 @@ body {
 /* Estilo para dos columnas */
 .two-columns {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  .customtitle {
+    font-size: 1.8rem !important;
+    /* line-height: rem; */
+  }
+
+  .customdescription {
+    display: none
+  }
+
 }

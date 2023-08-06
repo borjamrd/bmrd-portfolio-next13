@@ -27,7 +27,10 @@ const page = async ({}) => {
   return (
     <div>
       <div className="flex lg:mt-20 mt-5 mb-3 lg:mb-10">
-        <LargeHeading className="mx-auto">Projects & repos</LargeHeading>
+        <div className="mx-auto flex relative w-fit ">
+          <LargeHeading className="mx-auto z-10">Projects & repos</LargeHeading>
+          <span className="w-full inline-block absolute bg-gradient-to-r from-indigo-400 to-cyan-800 dark:bg-gradient-to-r dark:from-yellow-400 dark:to-orange-300 -bottom-2 -right-4 z-0  h-3"></span>
+        </div>
       </div>
       {projects && <ProjectsSection projects={projects} />}
     </div>
