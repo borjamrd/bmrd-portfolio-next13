@@ -7,7 +7,7 @@ import Card from "./ui/Card";
 import Button from "./ui/buttons/Button";
 import Badge from "./ui/badges/Badge";
 
-interface BreadcrumbsProps {}
+export type BreadcrumbsProps = {};
 
 const NextBreadcrumbs: FC<BreadcrumbsProps> = ({}) => {
   const router = useRouter();
