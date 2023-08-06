@@ -65,12 +65,12 @@ const ProjectsSection: FC<ProjectsSectionProps> = ({ projects }) => {
         <Input
           onChange={(e) => handleChange(e)}
           placeholder="Search by name or technology"
-          className="w-1/2 text-center text-slate-900 dark:text-slate-100"
+          className="lg:w-1/2 w-full text-center text-slate-900 dark:text-slate-100"
         ></Input>
       </div>
       <div className="flex flex-col-reverse lg:flex-row lg:gap-4 gap-2">
         <div
-          className={`grid grid-cols-2   ${
+          className={`auto-rows-max grid grid-cols-2   ${
             twoColumns ? "two-columns" : ""
           } gap-2 lg:gap-4 ${
             twoColumns

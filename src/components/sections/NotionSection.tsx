@@ -20,7 +20,7 @@ const NotionSection: FC<NotionSectionProps> = ({}) => {
         className="aspect-square flex flex-col justify-center items-center"
       >
         <Icons.NewTab />
-        <div className="text-4xl">
+        <div className="lg:text-4xl text-base ">
           <Icons.AvatarNotion />
         </div>
       </Card>

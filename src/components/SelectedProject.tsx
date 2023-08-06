@@ -65,7 +65,7 @@ const SelectedProject: FC<SelectedProjectProps> = ({
             </span>
 
             <Link
-              className="flex flex-wrap gap-2 hover:underline underline-offset-2 items-center text-slate-900 dark:text-slate-100"
+              className="flex lg:text-base text-sm flex-wrap gap-2 hover:underline underline-offset-2 items-center text-slate-900 dark:text-slate-100"
               href={project.github}
               target="_blank"
             >
@@ -73,7 +73,7 @@ const SelectedProject: FC<SelectedProjectProps> = ({
             </Link>
           </div>
         )}
-        {project.github && (
+        {project.urlProject && (
           <div className="flex flex-col">
             <span className="items-center gap-1 flex text-nowrap text-xl text-slate-900 dark:text-yellow-300 font-semibold">
               {" "}
@@ -81,7 +81,7 @@ const SelectedProject: FC<SelectedProjectProps> = ({
               Full project
             </span>
             <Link
-              className="flex flex-wrap gap-2 hover:underline underline-offset-2 items-center text-slate-900 dark:text-slate-100"
+              className="flex lg:text-base text-sm flex-wrap gap-2 hover:underline underline-offset-2 items-center text-slate-900 dark:text-slate-100"
               href={project.urlProject}
               target="_blank"
             >

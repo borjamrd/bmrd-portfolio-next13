@@ -26,11 +26,10 @@ const page = async ({}) => {
 
   return (
     <div>
-      <div className="flex mt-20 mb-10">
-        <LargeHeading className="mx-auto">Projects</LargeHeading>
+      <div className="flex lg:mt-20 mt-5 mb-3 lg:mb-10">
+        <LargeHeading className="mx-auto">Projects & repos</LargeHeading>
       </div>
-
-      <ProjectsSection projects={projects} />
+      {projects && <ProjectsSection projects={projects} />}
     </div>
   );
 };

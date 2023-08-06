@@ -11,7 +11,7 @@ interface ToastProps {}
 
 const Message = () => {
   return (
-    <div className="relative border-green-900 border-2/1 shadow shadow-slate-700 bg-green-400/20 p-4 rounded-xl text-slate-900">
+    <div className="relative border-green-900 backdrop-blur-sm border-2/1 shadow shadow-slate-700 bg-green-400/20 p-4 rounded-xl text-slate-900">
       <button
         className="absolute top-1 right-1 bg-transparent p-2"
         onClick={() => toast.dismiss()}
@@ -44,7 +44,7 @@ const Toast: FC<ToastProps> = ({}) => {
   useEffect(() => {
     const toastTimeout = setTimeout(() => {
       toast.custom(<Message />);
-    }, 1000);
+    }, 10000);
     return () => clearTimeout(toastTimeout);
   }, []);
 

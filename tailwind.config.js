@@ -32,7 +32,7 @@ module.exports = {
         '5/1': '5 / 1',
       },
       borderWidth: {
-        '2/1': '0.125rem',
+        '2/1': '0.119rem',
 
       }, backdropBlur: {
         xxs: '1px',

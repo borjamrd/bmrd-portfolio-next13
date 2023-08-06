@@ -7,6 +7,6 @@ export default async function getProjects() {
     );
     return response.data;
   } catch (error) {
-    throw new Error("erro");
+    console.log(error);
   }
 }

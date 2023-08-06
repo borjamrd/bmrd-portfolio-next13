@@ -16,25 +16,27 @@ const ProjectSection: FC<ProjectSectionProps> = ({}) => {
     >
       <Card
         variant={"secondary"}
-        className="relative hover:col-span-2 h-full w-full flex flex-col justify-end items-center p-2"
+        className="relative h-full w-full flex flex-col lg:justify-end justify-center items-center"
       >
-        <div className="h-full w-full absolute opacity-40 z-0 ">
+        <div className="h-full w-full absolute top-0 opacity-40 z-0">
           <Image
             src={projects}
             alt="Picture of the author"
-            width={800}
-            height={550}
-            className="w-full h-full object-cover "
+            fill={true}
+            sizes="(min-width: 808px) 50vw, 100vw"
+            priority={false}
+            className="object-cover"
+
             // blurDataURL="data:..."  // automatically provided
             // placeholder="blur" // Optional blur-up while loading
           />
         </div>
         <Icons.NewTab />
-        <div className="lg:p-4 p-2 z-10">
-          <h3 className="font-bold lg:text-5xl text-xl mb-2">
+        <div className="lg:p-4 p-3 z-10 lg:flex-col flex">
+          <h3 className="lg:flex lg:ms-0 m-auto font-bold lg:text-5xl text-xl lg:mb-2">
             Projects & stuff
           </h3>
-          <p className="lg:text-2xl text-sm">
+          <p className="lg:flex hidden lg:text-xl text-sm">
             Here you can find my latests projects and ideas. Some of them work
             and some of them... well go & check it
           </p>
