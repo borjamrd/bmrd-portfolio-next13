@@ -1,13 +1,12 @@
 "use client";
 
+import NextBreadcrumbs from "@/components/Breadcrumbs";
 import Providers from "@/components/Providers";
-import ThemeToggle from "@/components/ui/ThemeToggle";
 import { cn } from "@/lib/utils";
+import { AnimatePresence } from "framer-motion";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { AnimatePresence } from "framer-motion";
-import ToggleSection from "@/components/sections/ToggleSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,15 +29,13 @@ export default function RootLayout({
             <main
               className={cn(
                 inter.className,
-                "min-h-screen transition-colors ease-in-out duration-5000 text-cyan-100  dark:text-slate-100 bg-gradient-to-br from-slate-100 from-60% via-cyan-300 via to-white to-100%  dark:from-black dark:to-[#111111] relative"
+                "min-h-screen transition-colors ease-in-out duration-5000 text-slate-100  dark:text-slate-100 bg-gradient-to-br from-slate-100 from-60% via-cyan-300 via to-white to-100%  dark:from-black dark:to-[#111111]"
               )}
             >
-              <ToggleSection className="absolute top-4 right-4 w-fit" />
-
               {/* dpNFuT lg:px-96 */}
 
               <div className="dpNFuT min-h-screen xl:px-64 md:px-40 p-5">
-                {/* <Breadcrumbs /> */}
+                <NextBreadcrumbs />
                 {children}
               </div>
             </main>

@@ -56,6 +56,7 @@ const SelectedProject: FC<SelectedProjectProps> = ({
           alt={project.subtitle}
         />
       </div>
+
       <div className="flex flex-col gap-2">
         {project.github && (
           <div className="flex flex-col">

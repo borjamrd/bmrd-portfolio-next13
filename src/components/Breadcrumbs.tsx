@@ -1,43 +1,52 @@
-import { useRouter } from "next/navigation";
-import Breadcrumbs from "@mui/material/Breadcrumbs";
-import { FC } from "react";
+"use client";
+
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import { FC } from "react";
 import ToggleSection from "./sections/ToggleSection";
 import Card from "./ui/Card";
-import Button from "./ui/buttons/Button";
 import Badge from "./ui/badges/Badge";
+import Button from "./ui/buttons/Button";
 
 export type BreadcrumbsProps = {};
 
 const NextBreadcrumbs: FC<BreadcrumbsProps> = ({}) => {
   const router = useRouter();
+  const pathname = usePathname();
 
   let currentLink: any = "";
-  // const loc = location;
-  // const crumbs = loc.pathname
-  //   .split("/")
-  //   .filter((crumb) => crumb !== "")
-  //   .map((crumb) => {
-  //     currentLink = `/${crumb}`;
-  //     return (
-  //       <Badge variant={"dark"} className="ms-2" key={crumb}>
-  //         <Link href={currentLink}>/ {crumb}</Link>
-  //       </Badge>
-  //     );
-  //   });
+
+  const crumbs: any = pathname
+    ?.split("/")
+    .filter((crumb: any) => crumb !== "")
+    .map((crumb) => {
+      currentLink = `/${crumb}`;
+      return (
+        <>
+          /{" "}
+          <Badge
+            className="mx-1  dark:bg-slate-800 text-slate-100 bg-cyan-900/50"
+            key={crumb}
+          >
+            <Link href={currentLink}> {crumb}</Link>
+          </Badge>
+        </>
+      );
+    });
 
   return (
     <div className="flex gap-2 mb-10 sticky top-5 z-30">
       <Card
-        variant={"transparent"}
+        variant={"default"}
         className="aspect-auto backdrop-blur-xl flex w-11/12 items-center px-6 py-2 lg:px-8"
       >
-        <Button onClick={() => router.back()}>Atrás</Button>
-        {/* {crumbs} */}
+        <Badge className="mx-1 dark:bg-slate-800 text-slate-100 bg-cyan-900/50">
+          <Link href={"/"}>Home</Link>
+        </Badge>
+        {crumbs}
       </Card>
-      <div className="w-1/12">
-        <ToggleSection />
-      </div>
+
+      <ToggleSection />
     </div>
   );
 };

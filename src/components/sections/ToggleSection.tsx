@@ -15,7 +15,7 @@ const ThemeToggle = dynamic(
 const ToggleSection: FC<ToggleSectionProps> = ({ className }) => {
   return (
     <Card
-      variant={"transparent"}
+      variant={"default"}
       className={cn(
         "aspect-square col-span-1 md:aspect-auto flex flex-col justify-center items-center lg:p-4 p-2",
         className

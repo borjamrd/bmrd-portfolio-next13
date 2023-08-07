@@ -12,7 +12,7 @@ const ThemeToggle: FC<ThemeToggleProps> = ({}) => {
   return (
     <button
       suppressHydrationWarning
-      className="active:rotate-45 text-slate-900 dark:text-slate-100 scale-100 transition-all rounded md:p-0"
+      className="active:rotate-45 text-slate-100 scale-100 transition-all rounded md:p-0"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       {theme === "dark" ? <Sun /> : <Moon />}

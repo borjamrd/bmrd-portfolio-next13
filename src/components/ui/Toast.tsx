@@ -19,13 +19,13 @@ const Message = () => {
         <TfiClose className="text-slate-900 dark:text-slate-100" />
       </button>
       <div className="pe-2 w-44 mb-2 dark:text-slate-100">
-        👋 Hi! Hope you're enjoying. Could you give me a Github start?
+        👋 Hi! Hope you're enjoying. Do you want to follow me?
       </div>
       <div>
         <Link
           className="flex gap-2 text-wrap items-center px-2 py-0.5 w-fit bg-white border-slate-800 border rounded hover:bg-success hover:text-white hover:border-green-700"
           target="_blank"
-          href={"https://github.com/borjamrd"}
+          href={"https://github.com/borjamrd/portfolio-next13"}
           onClick={() => toast.dismiss()}
         >
           Sure!
