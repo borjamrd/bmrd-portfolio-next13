@@ -10,7 +10,7 @@ interface ProjectSectionProps {}
 const ProjectSection: FC<ProjectSectionProps> = ({}) => {
   return (
     <Link
-      className=" text-white rounded-3xl row-span-1 col-span-3 aspect-3/1 md:aspect-auto overflow-hidden hover:scale-[103%] transition duration-500 ease-in-out"
+      className=" text-white rounded-3xl row-span-1 col-span-2 md:col-span-3 aspect-2/1 md:aspect-auto  overflow-hidden hover:scale-[103%] transition duration-500 ease-in-out"
       href={"/projects"}
       rel="noopener noreferrer"
     >
@@ -34,7 +34,7 @@ const ProjectSection: FC<ProjectSectionProps> = ({}) => {
         <Icons.NewTab />
         <div className="lg:p-4 p-3 z-10 lg:flex-col flex">
           <h3 className="lg:flex lg:ms-0 m-auto font-bold lg:text-5xl text-xl lg:mb-2">
-            Projects & stuff
+            Projects
           </h3>
           <p className="lg:flex hidden lg:text-xl text-sm">
             Here you can find my latests projects and ideas. Some of them work

@@ -29,7 +29,7 @@ const SelectedProject: FC<SelectedProjectProps> = ({
       >
         <TfiClose className="text-slate-900 dark:text-slate-100" />
       </button>
-      <h4 className="text-slate-800 lg:text-3xl md:text-2xl dark:text-slate-100 font-bold mb-2">
+      <h4 className="text-neutral-900 dark:text-neutral-100 tracking-tight lg:text-3xl md:text-2xl font-bold mb-2">
         {project.name}
       </h4>
       <div className="flex gap-1 flex-wrap mb-4">

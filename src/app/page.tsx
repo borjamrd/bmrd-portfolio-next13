@@ -1,3 +1,4 @@
+import AboutSection from "@/components/sections/AboutSection";
 import CodeSection from "@/components/sections/CodeSection";
 import CourseAngularSection from "@/components/sections/CourseAngularSection";
 import CourseNodeSection from "@/components/sections/CourseNodeSection";
@@ -18,14 +19,13 @@ export default function Home() {
       <div className="min-h-screen flex flex-col">
         <section className="h-full grid auto-rows-max grid-cols-3 gap-2 lg:grid-cols-5 md:gap-4 lg:py-5 container">
           <HeroSection />
-          {/* <ToggleSection /> */}
           <LinkedinSection />
           <CvSection />
           <GithubSection />
           <MailSection />
           <ProjectSection />
           <TechSection />
-          {/* <SpotifySection /> */}
+          <AboutSection />
           <DiscordSection />
           <CourseNodeSection />
           <CourseAngularSection />

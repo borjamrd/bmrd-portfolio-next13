@@ -19,16 +19,20 @@ const NextBreadcrumbs: FC<BreadcrumbsProps> = ({}) => {
   const crumbs: any = pathname
     ?.split("/")
     .filter((crumb: any) => crumb !== "")
-    .map((crumb) => {
+    .map((crumb, i) => {
       currentLink = `/${crumb}`;
       return (
         <>
           /{" "}
           <Badge
-            className="mx-1  dark:bg-slate-800 text-slate-100 bg-cyan-900/50"
-            key={crumb}
+            // className="mx-1  dark:bg-slate-800 text-slate-100 bg-cyan-900/50"
+            className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline"
+            key={i}
           >
-            <Link href={currentLink}> {crumb}</Link>
+            <Link href={currentLink}>
+              {" "}
+              {crumb?.charAt(0).toUpperCase() + crumb?.slice(1)}
+            </Link>
           </Badge>
         </>
       );
@@ -40,7 +44,10 @@ const NextBreadcrumbs: FC<BreadcrumbsProps> = ({}) => {
         variant={"default"}
         className="aspect-auto backdrop-blur-xl flex w-11/12 items-center px-6 py-2 lg:px-8"
       >
-        <Badge className="mx-1 dark:bg-slate-800 text-slate-100 bg-cyan-900/50">
+        <Badge
+          // className="mx-1 dark:bg-slate-800 text-slate-100 bg-cyan-900/50"
+          className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline"
+        >
           <Link href={"/"}>Home</Link>
         </Badge>
         {crumbs}

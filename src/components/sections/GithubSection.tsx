@@ -13,7 +13,7 @@ const GithubSection: FC<GithubSectionProps> = ({}) => {
       href={"https://github.com/borjamrd"}
       rel="noopener noreferrer"
       target="blank"
-      className="col-span-2 md:col-span-1 lg:aspect-square"
+      className="col-span-1 aspect-auto md:col-span-1 lg:aspect-square"
     >
       <Card
         hover={"scale"}

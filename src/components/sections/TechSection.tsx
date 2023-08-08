@@ -27,7 +27,7 @@ const TechSection: FC<TechSectionProps> = ({}) => {
   return (
     <Card
       variant={"red"}
-      className="col-span-3 md:col-span-3 md:row-span-1 aspect-3/1 md:aspect-auto flex"
+      className="col-span-3 md:col-span-2 md:row-span-1 aspect-2/1 md:aspect-auto flex"
     >
       <div className="m-auto grid grid-cols-6 place-content-center text-2xl sm:text-4xl place-items-center sm:gap-5 gap-2 p-2">
         <SiHtml5 title="html" />
