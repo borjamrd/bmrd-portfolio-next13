@@ -54,7 +54,7 @@ export default async function getNowPlayingItem() {
 
 
     const song = await response.json();
-    console.log(song)
+
     const albumImageUrl = song.item.album.images[0].url;
     const artist = song.item.artists.map((_artist: any) => _artist.name).join(", ");
     const isPlaying = song.is_playing;

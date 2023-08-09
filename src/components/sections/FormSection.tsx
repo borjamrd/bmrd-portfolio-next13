@@ -18,7 +18,7 @@ const FormSection: FC<FormSectionProps> = ({}) => {
   const onSubmit: SubmitHandler<Lead> = async (lead: Lead) => {
     try {
       const response = await postData(URL, lead);
-      console.log(response);
+
       if (response?.status === "Lead created succesfully") {
         setSended(true);
         toast.success("Alllllllllright! Information sended");
@@ -27,8 +27,6 @@ const FormSection: FC<FormSectionProps> = ({}) => {
       toast.error("Sorry buddy, technical problems");
     }
   };
-
-  console.log(error);
 
   return (
     <>

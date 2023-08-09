@@ -5,10 +5,9 @@ import { FC, useContext, useEffect, useState } from "react";
 
 import { ProjectContext } from "../ProjectProvider";
 import SelectedProject from "../SelectedProject";
-import ProjectCard from "./ProjectCard";
-import Toast from "../ui/Toast";
-import Card from "../ui/Card";
 import { Input } from "../ui/Input";
+import Toast from "../ui/Toast";
+import ProjectCard from "./ProjectCard";
 
 interface ProjectsSectionProps {
   projects: Project[];

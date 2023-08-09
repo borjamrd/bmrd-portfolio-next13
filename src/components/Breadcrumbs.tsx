@@ -6,8 +6,7 @@ import { FC } from "react";
 import ToggleSection from "./sections/ToggleSection";
 import Card from "./ui/Card";
 import Badge from "./ui/badges/Badge";
-import Button from "./ui/buttons/Button";
-
+import { BsChevronRight } from "react-icons/bs";
 export type BreadcrumbsProps = {};
 
 const NextBreadcrumbs: FC<BreadcrumbsProps> = ({}) => {
@@ -23,7 +22,7 @@ const NextBreadcrumbs: FC<BreadcrumbsProps> = ({}) => {
       currentLink = `/${crumb}`;
       return (
         <>
-          /{" "}
+          <BsChevronRight key={i} />
           <Badge
             // className="mx-1  dark:bg-slate-800 text-slate-100 bg-cyan-900/50"
             className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline"

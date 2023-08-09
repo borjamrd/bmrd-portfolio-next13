@@ -16,27 +16,27 @@ interface AboutItems {
 const page: FC<pageProps> = ({}) => {
   const aboutItems: AboutItems[] = [
     {
-      icon: <SlLocationPin />,
+      icon: <SlLocationPin className="sm:text-base text-3xl" />,
       text: "Happily married with my mujercita and living in Madrid",
     },
     {
-      icon: <SiVolkswagen />,
+      icon: <SiVolkswagen className="sm:text-base text-3xl" />,
       text: "Currently working as fullstack developer at Volkswagen Retail Group Spain ",
     },
     {
-      icon: <FaCodeBranch />,
+      icon: <FaCodeBranch className="sm:text-base text-3xl" />,
       text: "I finished a full stack developer bootcamp at The Bridge | Digital Talent Accelerator",
     },
     {
-      icon: <SlRocket />,
+      icon: <SlRocket className="sm:text-base text-3xl" />,
       text: "Founded Mushing Marketing, a digital marketing agency.",
     },
     {
-      icon: <PiStudentFill />,
+      icon: <PiStudentFill className="sm:text-base text-3xl" />,
       text: "I finished my marketing degree in english at Rey Juan Carlos University in Madrid",
     },
     {
-      icon: <SlChart />,
+      icon: <SlChart className="sm:text-base text-3xl" />,
       text: "I left my work at Europa Press after 6 years in financial and legal departments",
     },
   ];

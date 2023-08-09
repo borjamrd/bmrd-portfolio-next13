@@ -11,7 +11,6 @@ const SpotifySection: FC<SpotifySectionProps> = ({}) => {
 
   useEffect(() => {
     Promise.all([getNowPlayingItem()]).then((results) => {
-      console.log(result);
       setResult(results[0]);
       setLoading(false);
     });

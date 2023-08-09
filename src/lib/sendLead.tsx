@@ -19,7 +19,7 @@ export function usePostLead() {
 
     try {
       const response = await axios.post(url, body);
-      console.log(response);
+
       setIsLoading(false);
       return response.data;
     } catch (error) {
