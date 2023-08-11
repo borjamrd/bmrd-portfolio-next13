@@ -21,19 +21,18 @@ const NextBreadcrumbs: FC<BreadcrumbsProps> = ({}) => {
     .map((crumb, i) => {
       currentLink = `/${crumb}`;
       return (
-        <>
-          <BsChevronRight key={i} />
+        <div key={i} className="flex gap-1 items-center">
+          <BsChevronRight />
           <Badge
             // className="mx-1  dark:bg-slate-800 text-slate-100 bg-cyan-900/50"
             className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline"
-            key={i}
           >
             <Link href={currentLink}>
               {" "}
               {crumb?.charAt(0).toUpperCase() + crumb?.slice(1)}
             </Link>
           </Badge>
-        </>
+        </div>
       );
     });
 
@@ -52,7 +51,7 @@ const NextBreadcrumbs: FC<BreadcrumbsProps> = ({}) => {
         {crumbs}
       </Card>
 
-      <ToggleSection />
+      <ToggleSection className="w-1/12" />
     </div>
   );
 };

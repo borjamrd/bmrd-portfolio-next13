@@ -3,7 +3,6 @@ import ProjectsSection from "@/components/sections/ProjectsSection";
 import LargeHeading from "@/components/ui/headings/LargeHeading";
 import getProjects from "@/lib/getProjects";
 import { Metadata } from "next";
-import { useRouter } from "next/router";
 
 export interface Project {
   _id: string;
@@ -23,7 +22,7 @@ export const metadata: Metadata = {
 };
 
 const page = async ({}) => {
-  const data: any = null;
+  const data: any = await getProjects();
   const projects: Project[] = data?.projects;
   if (!data) {
     return <ErrorPage statusCode={404} />;
