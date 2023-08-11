@@ -5,6 +5,6 @@ export default async function getProjects() {
     const response = await axios.get(`${process.env.API_URL}/projects`);
     return response.data;
   } catch (error) {
-    throw new Error();
+    throw new Error("error fetching projects");
   }
 }
