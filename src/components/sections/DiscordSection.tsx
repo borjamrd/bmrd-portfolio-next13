@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Card from "../ui/Card";
 import { Icons } from "../ui/Icons";
+import ErrorPage from "./ErrorPage";
 
 interface DiscordSectionProps {}
 
@@ -11,6 +12,10 @@ const DiscordSection: FC<DiscordSectionProps> = async ({}) => {
       method: "GET",
     }
   ).then((res) => res.json());
+
+  if (!data) {
+    return <ErrorPage statusCode={404} />;
+  }
 
   const activities = data.activities.filter(
     (activity: any) => activity.type == 0
