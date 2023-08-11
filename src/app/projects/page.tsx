@@ -1,3 +1,4 @@
+import ErrorPage from "@/components/sections/ErrorPage";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import LargeHeading from "@/components/ui/headings/LargeHeading";
 import getProjects from "@/lib/getProjects";
@@ -23,6 +24,9 @@ export const metadata: Metadata = {
 const page = async ({}) => {
   const data: any = await getProjects();
   const projects: Project[] = data?.projects;
+  if (!data) {
+    return <ErrorPage statusCode={404} />;
+  }
 
   return (
     <div>
