@@ -23,10 +23,11 @@ export const metadata: Metadata = {
 
 const page = async ({}) => {
   const data: any = await getProjects();
-  const projects: Project[] = data?.projects;
+
   if (!data) {
     return <ErrorPage statusCode={404} />;
   }
+  const projects: Project[] = data?.projects;
 
   return (
     <div>
