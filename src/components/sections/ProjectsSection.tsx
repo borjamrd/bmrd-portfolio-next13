@@ -15,7 +15,9 @@ interface ProjectsSectionProps {
 
 const ProjectsSection: FC<ProjectsSectionProps> = ({ projects }) => {
   const { selectedProject, setSelectedProject } = useContext(ProjectContext);
-  const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects);
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>(
+    projects || []
+  );
 
   const [twoColumns, setTwoColumns] = useState(false);
   const [tags, setTags] = useState<string[]>([]);
