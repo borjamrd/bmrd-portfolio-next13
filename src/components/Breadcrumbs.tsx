@@ -1,16 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { FC } from "react";
+import { BsChevronRight } from "react-icons/bs";
 import ToggleSection from "./sections/ToggleSection";
 import Card from "./ui/Card";
 import Badge from "./ui/badges/Badge";
-import { BsChevronRight } from "react-icons/bs";
 export type BreadcrumbsProps = {};
 
 const NextBreadcrumbs: FC<BreadcrumbsProps> = ({}) => {
-  const router = useRouter();
   const pathname = usePathname();
 
   let currentLink: any = "";
@@ -40,7 +39,7 @@ const NextBreadcrumbs: FC<BreadcrumbsProps> = ({}) => {
     <div className="flex gap-2 mb-10 sticky top-5 z-30">
       <Card
         variant={"default"}
-        className="aspect-auto backdrop-blur-xl flex w-11/12 items-center px-6 py-2 lg:px-8"
+        className="aspect-auto backdrop-blur-xl flex w-10/12 lg:w-11/12 items-center px-6 py-2 lg:px-8"
       >
         <Badge
           // className="mx-1 dark:bg-slate-800 text-slate-100 bg-cyan-900/50"
@@ -51,7 +50,7 @@ const NextBreadcrumbs: FC<BreadcrumbsProps> = ({}) => {
         {crumbs}
       </Card>
 
-      <ToggleSection className="w-1/12" />
+      <ToggleSection className="w-2/12 lg:w-1/12" />
     </div>
   );
 };

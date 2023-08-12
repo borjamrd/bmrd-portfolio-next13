@@ -14,26 +14,12 @@ interface ProjectsSectionProps {
 }
 
 const ProjectsSection: FC<ProjectsSectionProps> = ({ projects }) => {
+  if (!projects) {
+    projects = [];
+  }
   const { selectedProject, setSelectedProject } = useContext(ProjectContext);
-  const [filteredProjects, setFilteredProjects] = useState<Project[]>(
-    projects || []
-  );
-
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects);
   const [twoColumns, setTwoColumns] = useState(false);
-  const [tags, setTags] = useState<string[]>([]);
-
-  useEffect(() => {
-    setProjectTags();
-  }, []);
-
-  const setProjectTags = () => {
-    const alltags: any[] = [];
-    projects.forEach((project) => {
-      alltags.push(project.tags);
-    });
-    const tags: any[] = [...new Set(alltags.flat())];
-    setTags(tags);
-  };
 
   useEffect(() => {
     if (selectedProject) {
@@ -92,7 +78,7 @@ const ProjectsSection: FC<ProjectsSectionProps> = ({ projects }) => {
           </div>
         )}
       </div>
-      {filteredProjects.length === 0 && (
+      {filteredProjects?.length === 0 && (
         <div className="mt-4 text-center text-2xl text-slate-500">
           No projects founded
         </div>

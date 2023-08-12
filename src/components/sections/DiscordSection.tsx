@@ -8,7 +8,7 @@ interface DiscordSectionProps {}
 
 const DiscordSection: FC<DiscordSectionProps> = async ({}) => {
   const data: any = await getDiscordStatus();
-  console.log(data);
+
   if (!data) {
     return <ErrorPage statusCode={404} />;
   }

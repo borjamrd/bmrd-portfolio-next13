@@ -3,6 +3,7 @@ import ProjectsSection from "@/components/sections/ProjectsSection";
 import LargeHeading from "@/components/ui/headings/LargeHeading";
 import getProjects from "@/lib/getProjects";
 import { Metadata } from "next";
+import { useRouter } from "next/navigation";
 
 export interface Project {
   _id: string;
