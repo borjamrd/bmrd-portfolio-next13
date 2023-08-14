@@ -8,7 +8,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "bmrd | fullstack developer",
+  title: "Portfolio | Bmrd",
   description: "...but not another fullstack developer",
 };
 
@@ -21,6 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="shortcut icon" href="/images/favicon.ico" />
+        <meta property="og:image" content="/brmd.png" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
