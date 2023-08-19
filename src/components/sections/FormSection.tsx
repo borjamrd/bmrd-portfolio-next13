@@ -30,7 +30,10 @@ const FormSection: FC<FormSectionProps> = ({}) => {
 
   return (
     <>
-      <Card className="col-span-3 md:col-span-5 md:row-span-1 aspect-auto flex flex-col justify-center items-center p-2 lg:px-10 py-6 lg:py-20">
+      <Card
+        variant={"dark"}
+        className="col-span-3 md:row-span-1 aspect-auto flex flex-col justify-center items-center p-2 lg:px-10 py-6 lg:py-20"
+      >
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col lg:flex-row gap-2 flex-nowrap"
