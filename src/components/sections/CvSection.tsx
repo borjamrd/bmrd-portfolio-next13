@@ -9,7 +9,7 @@ const CvSection: FC<CvSectionProps> = ({}) => {
   return (
     <Link
       href={
-        "https://drive.google.com/file/d/16B1mBLTP0-WZ8YJVndDhruRAibRNzhgb/view?usp=sharing"
+        "https://drive.google.com/drive/folders/1mAEf1XnMNLJUR4u09GMSUooNUx5QP6hb?usp=sharing"
       }
       rel="noopener noreferrer"
       target="blank"

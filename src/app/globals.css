@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -11,6 +12,7 @@
   --scout-theme--filter-backdrop: blur(0px);
   --scout-z-index-base: 9999;
   --scout-z-index-overlay: 999;
+  --bg-line: #d5d7da28;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,8 +31,8 @@ body {
 }
 
 .dpNFuT {
-  background-image: repeating-linear-gradient(to bottom, transparent, transparent 99px, #686c7328 99px, #686c7328 100px),
-    repeating-linear-gradient(to right, transparent, transparent 99px, #686c7328 99px, #686c7328 100px);
+  background-image: repeating-linear-gradient(to bottom, transparent, transparent 99px, var(--bg-line) 99px, var(--bg-line) 100px),
+    repeating-linear-gradient(to right, transparent, transparent 99px, 99px, var(--bg-line) 100px);
 }
 
 .dpNFuT::after {
@@ -73,4 +75,18 @@ body {
     display: none
   }
 
+}
+
+.elemento {
+  opacity: 0;
+  display: none;
+  transform: translateY(-3rem), translateX(40px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.elemento.visible {
+  opacity: 1;
+  display: flex;
+  visibility: visible;
+  transform: translateY(0), translateX(0);
 }

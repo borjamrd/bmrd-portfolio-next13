@@ -1,4 +1,5 @@
 import AboutSection from "@/components/sections/AboutSection";
+import BlogSection from "@/components/sections/BlogSection";
 import CodeSection from "@/components/sections/CodeSection";
 import CourseAngularSection from "@/components/sections/CourseAngularSection";
 import CourseNodeSection from "@/components/sections/CourseNodeSection";
@@ -31,6 +32,7 @@ export default function Home() {
           <CourseAngularSection />
           <CodeSection />
           <NotionSection />
+          <BlogSection />
           <FormSection />
         </section>
       </div>
