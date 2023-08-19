@@ -82,7 +82,7 @@ const AboutText = ({}) => {
         <Cursor />
       </p>
       <div className="flex flex-col-reverse gap-4">
-        {aboutItems.toReversed().map((item, index) => (
+        {aboutItems.reverse().map((item, index) => (
           <div
             className={`elemento flex gap-4 items-start backdrop-blur-xs bg-gradient-to-r  from-slate-500/10 from-60% to-cyan-200/10 dark:from-to-cyan-200/10 dark:to-slate-600/10 p-4 rounded-xl ${
               showDivs.includes(index) ? "visible" : ""
